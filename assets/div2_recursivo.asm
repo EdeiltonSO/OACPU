@@ -1,10 +1,10 @@
 main: 	addi $a0, $zero, 14	# n = 10
-      	jal div2		# chama a fun��o div2(a)
+      	jal div2		# chama a funcao div2(a)
         add $s0, $zero, $v0	# resul = div2(n)
         j exit
 div2: 	addi $sp, $sp, -8	# ajusta a pilha
       	sw $a0, 4($sp)		# salva na pilha a
-      	sw $ra, 0($sp)		# salva o endere�o de retorno
+      	sw $ra, 0($sp)		# salva o endereco de retorno
       	addi $t0, $zero, 2	# $t0 = 2
       	slt $t1, $a0, $t0 	#a0<t0?1:0
       	beq $t1, $zero, ifis2
